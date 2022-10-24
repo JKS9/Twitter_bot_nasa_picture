@@ -3,9 +3,12 @@ import {INasaDataApi} from '../types/interface';
 import {htag} from '../constant/htag';
 
 const FormatContent = async (content: INasaDataApi) => {
+  const random = Math.floor(Math.random() * 100);
   const text: string = content.explanation.substring(0, 90);
 
   let tweet: string =
+    random +
+    ' - ' +
     content.title +
     '\n \n' +
     text +
