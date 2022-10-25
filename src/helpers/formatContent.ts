@@ -5,6 +5,7 @@ import {htag} from '../constant/htag';
 const FormatContent = async (content: INasaDataApi) => {
   const random = Math.floor(Math.random() * 100);
   const text: string = content.explanation.substring(0, 90);
+  const url: string = content.hdurl != undefined ? content.hdurl : content.url;
 
   let tweet: string =
     random +
@@ -19,7 +20,7 @@ const FormatContent = async (content: INasaDataApi) => {
     '\n' +
     htag +
     '\n \n' +
-    content.hdurl;
+    url;
 
   return tweet;
 };
