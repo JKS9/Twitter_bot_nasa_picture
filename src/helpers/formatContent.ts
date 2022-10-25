@@ -3,7 +3,7 @@ import {INasaDataApi} from '../types/interface';
 import {htag} from '../constant/htag';
 
 const FormatContent = async (content: INasaDataApi) => {
-  const random = Math.floor(Math.random() * 100);
+  const random = Math.floor(Math.random() * 500);
   const text: string = content.explanation.substring(0, 90);
   const url: string = content.hdurl != undefined ? content.hdurl : content.url;
 
