@@ -4,7 +4,7 @@ import ApiNasaRequest from '../services/apiNasaRequest';
 import TweetApi from '../services/tweet';
 import FormatContent from '../helpers/formatContent';
 
-const TweetController = async () => {
+const TweetControllerNasaPIcture = async () => {
   const content: INasaDataApi = await ApiNasaRequest();
 
   const tweet: string = await FormatContent(content);
@@ -12,4 +12,4 @@ const TweetController = async () => {
   await TweetApi(tweet);
 };
 
-export default TweetController;
+export default TweetControllerNasaPIcture;
